@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script src="https://kit.fontawesome.com/3a3b103f52.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style>
+        * {
+	     box-sizing: flex;
+          }
+
+            body {
+                font-family: 'Montserrat',sans-serif;
+                background-image: linear-gradient(to right, rgba(34, 184, 221, 0.849), rgb(253, 195, 36));
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: fit-content;
+                margin:  0 50px;
+            }
+
+            h1 {
+                font-size: 40px;
+                font-weight: bold;
+                margin: 0;
+            }
+            
+            p {
+                font-size: 14px;
+                font-weight: 100;
+                line-height: 20px;
+                letter-spacing: 0.5px;
+                margin: 20px 0 30px;
+            }
+           
+            a {
+                color: #e68311;
+                font-size: 14px;
+                text-decoration: none;
+                margin: 15px 0;
+            }
+            
+            button {
+                border-radius: 20px;
+                border: 1px solid #ff4b2b;
+                background-color: #ff4b2b;
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 12px 45px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: transform 80ms ease-in;
+            }
+            
+            button:active {
+                transform: scale(0.95);
+            }
+            
+            button:focus {
+                outline: none;
+            }
+            
+            button.ghost {
+                background-color: transparent;
+                border-color: #ffffff;
+            }
+            .color:hover{
+                color:#ff416c;
+            }
+            form {
+                background-color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 50px;
+                height: 100%;
+                text-align: center;
+            }
+            
+            input {
+                background-color: #eee;
+                border: none;
+                padding: 12px 15px;
+                margin: 8px 0;
+                width: 100%;
+            }
+            
+            .social-container {
+                margin: 20px 0;
+            }
+            
+            .social-container a {
+                background-color: solid;
+                border: 1px solid #5e0fdb;
+                border-radius: 100%;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 5px;
+                height: 40px;
+                width: 40px;
+            }
+            .container {
+                background-color: #c72e2e;
+                border-radius: 100px;
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                position: relative;
+                overflow: hidden;
+                width: 768px;
+                max-width: 100%;
+                min-height: 480px;
+            }
+            .form-container {
+                position: center;
+                top: 50%;
+                height: 100%;
+               
+            }
+            
+            .sign-in-container {
+                left: 0;
+                width: 50%;
+                top: 100px;
+                background-color: #ffffff;
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                position: relative;
+                width: 768px;
+                max-width: 100%;
+                min-height: 400px;
+            }
+            
+            .container.right-panel-active .sign-in-container {
+                transform: translateX(100%);
+            }
+            
+            .container.right-panel-active .sign-up-container {
+                transform: translateX(100%);
+                opacity: 1;
+                z-index: 5;
+                animation: show 0.6s;
+            }
+            
+         </style>
+  
+      <div class="form-container sign-in-container">
+          <form action="/login" method="POST">
+              <h1>Sign in</h1>
+              <div class="social-container">
+                  <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="social"><i class="fab fa-google"></i></a>
+                  <a href="https://twitter.com/login?lang=en" class="social"><i class="fab fa-twitter"></i></a>
+              </div>
+              <div>
+               <lable for="email">Email</lable>
+               <input type="email" id="email" name="email" required>
+              </div>
+              <div>
+               <lable for="password">Password</lable>
+               <input type="password" id="password" name="password" required>
+              
+            </div>
+             
+             <div class="color ">
+              <a href="#">Forgot your password?</a>
+            </div>
+            <a href="/"><button>Sign IN</button></a>
+             <!-- <button type="submit">Sign In</button>-->
+             <a href="/register">Sign Up</a>
+            </form>
+      </div>
+      
+      
+</body>
+</html>
